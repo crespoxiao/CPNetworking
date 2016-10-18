@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CPNetwoking_Example' do
+  pod 'CPNetwoking', :path => '../'
+
+  target 'CPNetwoking_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
