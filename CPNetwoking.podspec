@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CPNetwoking'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'CPNetworking is a HTTP component which encapsulate AFNetworking.'
 
 # This description is used to generate tags and improve search results.
@@ -38,8 +38,8 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation'
-    #s.dependency 'AFNetworking'
-    #s.dependency 'ReactiveCocoa', '~> 2.5'
-    #s.dependency 'JSONModel'
+    s.dependency 'AFNetworking', '~> 3.1.0'
+    s.dependency 'ReactiveCocoa', '~> 2.5'
+    s.dependency 'JSONModel', '~> 1.7.0'
 
 end

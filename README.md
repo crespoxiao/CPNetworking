@@ -10,6 +10,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+iOS8+
 
 ## Installation
 
@@ -20,10 +21,32 @@ it, simply add the following line to your Podfile:
 pod "CPNetwoking"
 ```
 
+## Guide
+
+    [CFXNetworking requestWithDomain:@"https://itunes.apple.com/"
+                             APIName:@"lookup"
+                                type:CFXGetRequestType
+                              params:^(CFXAPIParams *params) {
+                                [params addParamValue:@(507704613) forKey:@"id"];
+                              }
+                          modelClass:nil
+                             success:^(id model, NSDictionary *dic) {
+                               NSLog(@"model: %@ ,dic: %@",model,dic);
+                             }failed:^(NSError *err) {
+                               NSLog(@"%@",err);
+                             }takeUntil:[self cfx_httpTakeUntilSignal]];
+
+
+check the dependency info below. if the version is defferent in the Podfile of your project, just clone this repo and add floder CPNetwoking to you project.
+
+    s.dependency 'AFNetworking', '~> 3.1.0'
+    s.dependency 'ReactiveCocoa', '~> 2.5'
+    s.dependency 'JSONModel', '~> 1.7.0'
+    
 ## Author
 
-xiaochengfei, xiaochengfei@didichuxing.com
+CrespoXiao <http://weibo.com/crespoxiao>
 
 ## License
 
-CPNetwoking is available under the MIT license. See the LICENSE file for more info.
+CPNetwoking is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
