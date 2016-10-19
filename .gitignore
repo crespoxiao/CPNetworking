@@ -1,7 +1,7 @@
 # OS X
 .DS_Store
 
-# Xcode
+ Xcode
 build/
 *.pbxuser
 !default.pbxuser
@@ -11,13 +11,14 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+xcuserdata
 *.xccheckout
-profile
 *.moved-aside
 DerivedData
 *.hmap
 *.ipa
+*.xcodeproj/xcuserdata/*
+.idea/
 
 # Bundler
 .bundle
@@ -30,4 +31,5 @@ Carthage
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-# Pods/
+Pods/
+Podfile.lock

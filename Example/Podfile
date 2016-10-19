@@ -1,11 +1,15 @@
-use_frameworks!
+#use_frameworks!
+
+
+pod 'ReactiveCocoa', '~> 2.5'
+pod 'AFNetworking', '~> 3.1.0'
+pod 'JSONModel', '~> 1.7.0'
 
 target 'CPNetwoking_Example' do
   pod 'CPNetwoking', :path => '../'
-
   target 'CPNetwoking_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
+    #pod 'FBSnapshotTestCase'
   end
 end
